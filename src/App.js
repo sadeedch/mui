@@ -1,10 +1,25 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Notes from './pages/Notes'
 import Create from './pages/Create'
+import { createTheme, ThemeProvider } from '@material-ui/core/styles';
+import { red } from '@material-ui/core/colors';
 
+
+
+const theme = createTheme ({
+  palette : {
+    primary : {
+      main: '#fefefe'
+    },
+    secondary: red
+
+    
+  }
+})
 function App() {
   return (
-    <Router>
+    <ThemeProvider theme={theme}>    
+      <Router>
       <Switch>
         <Route exact path="/">
           <Notes />
@@ -14,6 +29,8 @@ function App() {
         </Route>
       </Switch>
     </Router>
+    </ThemeProvider>
+
   );
 }
 
