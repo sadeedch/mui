@@ -7,6 +7,7 @@ import { TextField } from '@material-ui/core';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormLabel from '@material-ui/core/FormLabel';
 import FormControl from '@material-ui/core/FormControl';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 
 const useStyle = makeStyles({
   field: {
@@ -21,6 +22,8 @@ const useStyle = makeStyles({
 
 
 export default function Create() {
+
+  const history = useHistory()
 
   const [title, setTitle] = useState("")
   const [details, setDetails] = useState("")
@@ -46,7 +49,11 @@ export default function Create() {
     }
 
     if (title, details) {
-      console.log (title,details, category)
+     fetch ('http://localhost:8000/notes', {
+      method: 'POST',
+      headers: {"content-type" : "applicaiton/json"},
+      body: JSON.stringify({title, details,category})
+     }).then(history.push('/'))     // built in react HISTORY  hook to redirect the user back to home page
     }
   }
 
