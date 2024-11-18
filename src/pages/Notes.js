@@ -1,6 +1,7 @@
 import { Paper } from '@mui/material'
-import { Grid } from '@material-ui/core'
+import { Container, Grid } from '@material-ui/core'
 import React, { useEffect, useState } from 'react'
+import NoteCard from '../components/NoteCard'
 
 
 export default function Notes() {
@@ -15,13 +16,29 @@ export default function Notes() {
     console.log("SaDDY")
   }, [])
 
+  // send request to delete the note based on id
+  const handleDelete = async (id) => {
+    fetch('http://localhost:8000/notes/' + id, {
+      method: 'DELETE'
+    })
+
+    const newNotes = notes.filter(note => note.id != id)   // filter everything else other than the deleted id matched
+    setNotes(newNotes)
+  }
+
   return (
-    <div>
+    <Container>
+      <Grid container spacing={3}>
       {notes.map(note => (
-        <p key = {note.id}> <h1>{note.title}<br/></h1>{note.details}<br/><br/> </p>
+        <Grid item key = {note.id} xs= {12} md= {6} lg= {4} > 
+      
+        <NoteCard note={note} handleDelete = {handleDelete}></NoteCard>
+         </Grid>
         ) )}
 
+      </Grid>
+
       
-    </div>
+    </ Container>
   )
 }
