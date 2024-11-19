@@ -80,7 +80,7 @@ export default function Create() {
     
       >
       </TextField>
-      {title}
+      
 
       <TextField 
       onChange={(e)=> setDetails(e.target.value)}
@@ -95,7 +95,7 @@ export default function Create() {
       error = {detailsError}
       >
       </TextField>
-      {details}
+      
 
       <br></br>
    <FormControl>

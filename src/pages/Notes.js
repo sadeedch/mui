@@ -2,7 +2,7 @@ import { Paper } from '@mui/material'
 import { Container, Grid } from '@material-ui/core'
 import React, { useEffect, useState } from 'react'
 import NoteCard from '../components/NoteCard'
-
+import Masonry from 'react-masonry-css'
 
 export default function Notes() {
 
@@ -26,17 +26,29 @@ export default function Notes() {
     setNotes(newNotes)
   }
 
+
+    // can use this to control how many columns are shown 
+    const breakPoints = {
+      default: 4,
+      1100: 3,
+      700: 2,
+      500: 1
+    }
   return (
     <Container>
-      <Grid container spacing={3}>
+      <Masonry
+      breakpointCols={3}
+      className="my-masonry-grid"
+      columnClassName="my-masonry-grid_column"
+      >
       {notes.map(note => (
-        <Grid item key = {note.id} xs= {12} md= {6} lg= {4} > 
+        <div item key = {note.id} > 
       
         <NoteCard note={note} handleDelete = {handleDelete}></NoteCard>
-         </Grid>
+         </div>
         ) )}
-
-      </Grid>
+      </Masonry>
+      
 
       
     </ Container>

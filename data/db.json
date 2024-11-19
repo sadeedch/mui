@@ -1,16 +1,58 @@
 {
   "notes": [
     {
-      "title": "Birthday Bash",
+      "title": "birthday bash",
       "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
       "category": "reminders",
-      "id": "1"
+      "id": 1
     },
     {
-      "id": "7cae",
-      "title": "WFH Forms",
-      "details": "complete WFH forms ",
+      "title": "Complete my ninja training",
+      "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.",
+      "category": "work",
+      "id": 2
+    },
+    {
+      "title": "Order a pizza!",
+      "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "category": "todos",
+      "id": 3
+    },
+    {
+      "id": "183e",
+      "title": "wfh forms",
+      "details": "new forms completed ",
       "category": "work"
+    },
+    {
+      "id": "ecac",
+      "title": "pay the money",
+      "details": "pay the money ",
+      "category": "money"
+    },
+    {
+      "id": "0fbf",
+      "title": "todo",
+      "details": "todo todo todo",
+      "category": "todos"
+    },
+    {
+      "id": "383e",
+      "title": "dsad",
+      "details": "asdsdsa",
+      "category": "work"
+    },
+    {
+      "id": "4852",
+      "title": "hospital ",
+      "details": "dsadsadsa",
+      "category": "work"
+    },
+    {
+      "id": "d8e1",
+      "title": "new note",
+      "details": "dsalkdsadsa",
+      "category": "reminders"
     }
   ]
 }
